@@ -27,5 +27,6 @@ p {
 .banner {
     background-image: url('../../assets/banner.png');
     background-attachment: fixed;
-    background-size: cover; /* Optional: Adjust the background image size */
+    background-size: 100px; /* Optional: Adjust the background image size */
+    height: 100vh;
   }
