@@ -46,7 +46,6 @@ export class ClientService {
       Id: clientId,
       username: this.claims?.emails?.toString(),
     });
-    console.log(body);
     return this.sentRequest(relativePath, body);
   }
 

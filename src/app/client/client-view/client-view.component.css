@@ -38,11 +38,10 @@ mat-card-content {
   width: 150px;
   overflow: hidden;
   flex: 2;
-  
 }
 
 .avatar img {
+    border-radius: 50%;
     width: 150px;
     height: 150px;
-    border-radius: 50%;
 }

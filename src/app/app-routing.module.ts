@@ -15,20 +15,6 @@ import { ClientCreateComponent } from './client/client-create/client-create.comp
  * https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-angular/docs/v2-docs/initialization.md#secure-the-routes-in-your-application
  */
 const routes: Routes = [
-    /* {
-        path: 'todo-edit/:id',
-        component: TodoEditComponent,
-        canActivate: [
-            MsalGuard
-        ]
-    },
-    {
-        path: 'todo-view',
-        component: TodoViewComponent,
-        canActivate: [
-            MsalGuard
-        ]
-    }, */
     {
         path: 'client-list',
         component: ClientListComponent
