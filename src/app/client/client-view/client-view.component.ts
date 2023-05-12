@@ -10,32 +10,43 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 })
 export class ClientViewComponent implements OnInit {
 
-  private client: Client[] = [];
-  private clientId: string = '';
-  private dataSource: any = [];
+  public client: Client = {
+    Id: 0,
+    FirstName: "",
+    LastName: "",
+    IdNumber: "",
+    DateOfBirth: "",
+    Email: "",
+    Sex: "",
+  }
+  private clientId: number = 0;
+  public hasClient: boolean = false;
 
   constructor(public clientService: ClientService, public route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((paramMap: ParamMap) => {
       if (paramMap.has('clientId')) {
-        this.clientId = paramMap.get('clientId') as string;
+        this.clientId = Number(paramMap.get('clientId'));
         console.log(`clientId: ${this.clientId}`)
 
-        this.clientService.fetchClient(this.clientId)
-        // .subscribe(
-        //   (response) => {
-        //     // this.client = response as Client[]; // Handle the response data
-        //     console.log(response)
-        //     // this.dataSource = [...this.client]
-        //   },
-        //   (error) => {
-        //     console.error(error); // Handle any errors
-        //   }
-        // );
-        console.log(this.client);
-      } 
+        this.getClient(this.clientId)
+      }
     });
+  }
+
+  getClient(clientId: number) {
+    this.clientService.fetchClient(clientId)
+      .subscribe(
+        (response) => {
+          console.log(response)
+          this.client = response as Client; // Handle the response data
+          this.hasClient = true;
+        },
+        (error) => {
+          console.error(error); // Handle any errors
+        }
+      );
   }
 
 }

@@ -1,5 +1,6 @@
 <div id="table-container">
-    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" >
+    <mat-card class="client-card" *ngIf="hasClient">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" *ngIf="hasClient" >
 
         <ng-container matColumnDef="Id" >
             <th mat-header-cell *matHeaderCellDef> Id </th>
@@ -24,4 +25,5 @@
         <tr mat-header-row *matHeaderRowDef="displayedColumns sticky: true"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
+    </mat-card>
 </div>

@@ -3,16 +3,35 @@
 }
 
 table {
-    margin: 3% auto auto auto;
-    width: 70%;
+    margin: 60px auto auto auto;
+    width: 100%;
+    background-color: #f0f0f0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0);
+}
+
+.client-card {
+    width: 600px;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: #f0f0f0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .mat-row {
     height: auto;
 }
 
+th {
+    
+    font-size: 16px;
+}
+
+.mat-header-cell {
+    padding: 8px 5px 8px 50px;
+}
+
 .mat-cell {
-    padding: 8px 8px 8px 0;
+    padding: 8px 5px 8px 50px;
 }
 
 p {
