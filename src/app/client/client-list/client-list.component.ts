@@ -12,6 +12,7 @@ export class ClientListComponent implements OnInit {
   private clientList: Client[] = [];
   displayedColumns: string[] = ['Id', 'FirstName', 'LastName', 'IdNumber'];
   dataSource: any = [];
+  hasClient: boolean = false;
 
   constructor(public clientService: ClientService) { }
 
@@ -20,12 +21,13 @@ export class ClientListComponent implements OnInit {
   }
 
   getClientList() {
-    this.clientService.fetchClientList()
+    return this.clientService.fetchClientList()
     .subscribe(
       (response) => {
         this.clientList = response as Client[]; // Handle the response data
-        console.log(this.clientList)
-        this.dataSource = [...this.clientList]
+        console.log(this.clientList);
+        this.dataSource = [...this.clientList];
+        this.hasClient = true
       },
       (error) => {
         console.error(error); // Handle any errors

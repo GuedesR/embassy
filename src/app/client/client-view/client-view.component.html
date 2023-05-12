@@ -1,1 +1,20 @@
-<p>client-view works!</p>
+<div id="table-container">
+    <mat-card class="client-card" *ngIf="hasClient">
+        <mat-card-header>
+            <mat-card-title>Client Details</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div>
+                <h2>{{ client.FirstName + ' ' + client.LastName}}</h2>
+                <p>Sex: {{ client.Sex }}</p>
+                <p>Email: {{ client.Email }}</p>
+                <p>National Id Number: {{ client.IdNumber }}</p>
+                <p>Date of Birth: {{ client.DateOfBirth }}</p>
+            </div>
+
+            <div *ngIf="!client">
+                <p>No client data available.</p>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>
