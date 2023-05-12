@@ -25,17 +25,27 @@ export class ClientService {
   };
 
   fetchClient( clientId: string) {
-    const relativePath: string = "/ListPeople";
+    const relativePath: string = "/ListPerson";
     const body = JSON.stringify({
       Id: clientId
     })
+    console.log(body)
 
     return this.sentRequest(relativePath, body)
   }
 
   sentRequest(relativePath: string, body: string) {
     return this.http.post(this.url + relativePath, body, { headers: this.headerList })
-      .subscribe ((response) => {console.log(response)}) 
+    .subscribe(
+      (response) => {
+        // this.client = response as Client[]; // Handle the response data
+        console.log(response)
+        // this.dataSource = [...this.client]
+      },
+      (error) => {
+        console.error(error); // Handle any errors
+      }
+    )
   }
 
 }

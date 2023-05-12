@@ -30,6 +30,7 @@ import {
 import { msalConfig, loginRequest, protectedResources } from './auth-config';
 import { ClientViewComponent } from './client/client-view/client-view.component';
 import { ClientListComponent } from './client/client-list/client-list.component';
+import { ClientCreateComponent } from './client/client-create/client-create.component';
 
 /**
  * Here we pass the configuration parameters to create an MSAL instance.
@@ -90,7 +91,8 @@ export function MSALGuardConfigFactory(): MsalGuardConfiguration {
         TodoViewComponent,
         TodoEditComponent,
         ClientViewComponent,
-        ClientListComponent
+        ClientListComponent,
+        ClientCreateComponent
     ],
     imports: [
         BrowserModule,
