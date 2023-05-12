@@ -4,6 +4,7 @@ export interface Client {
     LastName: string;
     IdNumber: string;
     DateOfBirth: string;
+    PhotoURL: string;
     Email: string;
     Sex: string;
 }

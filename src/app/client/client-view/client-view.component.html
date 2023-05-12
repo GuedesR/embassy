@@ -4,13 +4,16 @@
             <mat-card-title>Client Details</mat-card-title>
         </mat-card-header>
         <mat-card-content>
-            <div>
+            <div class="card-content">
                 <h2>{{ client.FirstName + ' ' + client.LastName}}</h2>
                 <p>Sex: {{ client.Sex }}</p>
                 <p>Email: {{ client.Email }}</p>
                 <p>National Id Number: {{ client.IdNumber }}</p>
                 <p>Date of Birth: {{ client.DateOfBirth }}</p>
             </div>
+            <div mat-card-avatar class="avatar">
+                <img src={{client.PhotoURL}} alt="Avatar">
+              </div>
 
             <div *ngIf="!client">
                 <p>No client data available.</p>

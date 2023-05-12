@@ -1,26 +1,48 @@
 #table-container {
-    overflow: auto;
+  overflow: auto;
 }
 
 .client-card {
-    width: 600px;
-    margin: 60px auto;
-    padding: 40px;
-    background-color: #f0f0f0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  width: 600px;
+  margin: 60px auto;
+  padding: 40px;
+  background-color: #f0f0f0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .client-card mat-card-title {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .client-card h2 {
-    font-size: 18px;
-    margin-bottom: 5px;
+  font-size: 18px;
+  margin-bottom: 5px;
 }
 
 .client-card p {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
+}
+
+mat-card-content {
+  display: flex;
+}
+
+.card-content {
+  flex: 3;
+}
+
+.avatar {
+  height: 150px;
+  width: 150px;
+  overflow: hidden;
+  flex: 2;
+  
+}
+
+.avatar img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
 }

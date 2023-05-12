@@ -18,6 +18,7 @@ export class ClientViewComponent implements OnInit {
     DateOfBirth: "",
     Email: "",
     Sex: "",
+    PhotoURL: ""
   }
   private clientId: number = 0;
   public hasClient: boolean = false;
