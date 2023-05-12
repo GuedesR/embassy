@@ -13,9 +13,12 @@ export class ClientCreateComponent implements OnInit {
 
   constructor(public clientService: ClientService) { 
     this.formGroup = new FormGroup({
+      DateOfBirth: new FormControl('', Validators.required),
       FirstName: new FormControl('', Validators.required),
       LastName: new FormControl('', Validators.required),
-      email: new FormControl('', [Validators.required, Validators.email])
+      Sex: new FormControl('', Validators.required),
+      IdNumber: new FormControl('', Validators.required),
+      Email: new FormControl('', [Validators.required, Validators.email])
     });
   }
 
