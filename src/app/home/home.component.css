@@ -23,3 +23,9 @@ p {
     margin: 10%;
     padding: 5%;
 }
+
+.banner {
+    background-image: url('../../assets/banner.png');
+    background-attachment: fixed;
+    background-size: cover; /* Optional: Adjust the background image size */
+  }
