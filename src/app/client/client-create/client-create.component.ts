@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators  } from '@angular/forms';
 import { ClientService } from '../client.service';
 import { Client } from '../client.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-client-create',
@@ -11,7 +12,7 @@ import { Client } from '../client.model';
 export class ClientCreateComponent implements OnInit {
   formGroup: FormGroup;
 
-  constructor(public clientService: ClientService) { 
+  constructor(public clientService: ClientService, private router: Router) { 
     this.formGroup = new FormGroup({
       DateOfBirth: new FormControl('', Validators.required),
       FirstName: new FormControl('', Validators.required),
@@ -29,6 +30,9 @@ export class ClientCreateComponent implements OnInit {
     if (this.formGroup.invalid) {
       return;
     }
+
+    
+    this.router.navigate([""]);
   
     const formData = this.formGroup.value;
   
@@ -42,6 +46,8 @@ export class ClientCreateComponent implements OnInit {
         // Handle the error
       }
     );
+
+
   }
   
 }
