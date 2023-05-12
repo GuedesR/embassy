@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ClientService } from '../client.service';
 import { Client } from '../client.model';
-import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-client-list',
@@ -11,7 +10,6 @@ import { Subscription } from 'rxjs';
 export class ClientListComponent implements OnInit {
 
   private clientList: Client[] = [];
-  private clientSubscriber = new Subscription();
   displayedColumns: string[] = ['Id', 'FirstName', 'LastName', 'IdNumber'];
   dataSource: any = [];
 

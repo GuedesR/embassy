@@ -5,6 +5,7 @@ import { BrowserUtils } from '@azure/msal-browser';
 
 import { HomeComponent } from './home/home.component';
 import { ClientListComponent } from './client/client-list/client-list.component';
+import { ClientViewComponent } from './client/client-view/client-view.component';
 // import { TodoEditComponent } from './todo-edit/todo-edit.component';
 // import { TodoViewComponent } from './todo-view/todo-view.component';
 
@@ -30,6 +31,10 @@ const routes: Routes = [
     {
         path: 'client-list',
         component: ClientListComponent
+    },
+    {
+        path: 'client-view/:clientId',
+        component: ClientViewComponent
     },
     {
         // Needed for handling redirect after login

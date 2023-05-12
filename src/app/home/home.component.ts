@@ -46,6 +46,7 @@ export class HomeComponent implements OnInit {
         if (claims) {
             const claimsTable = createClaimsTable(claims);
             this.dataSource = [...claimsTable];
+            console.log(claims)
         }
     }
 }
