@@ -12,7 +12,7 @@
         <p>Date of Birth: {{ client.DateOfBirth }}</p>
       </div>
       <div class="avatar">
-        <img src="{{ client.PhotoURL }}" alt="Avatar" />
+        <img src="{{ client.PhotoURL || '../assets/default-avatar.jpg' }}" alt="Avatar" />
       </div>
 
       <div *ngIf="!client">

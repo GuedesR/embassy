@@ -1,0 +1,15 @@
+#table-container {
+    overflow: auto;
+  }
+  
+  .client-card {
+    width: 600px;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: #f0f0f0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  
+  mat-form-field {
+    display: block;
+  }

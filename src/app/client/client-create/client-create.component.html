@@ -1,55 +1,57 @@
 <div id="table-container">
-  <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
-    <mat-form-field>
-      <mat-label>Birth Date</mat-label>
-      <input matInput formControlName="DateOfBirth" required />
-      <mat-error *ngIf="formGroup.controls['DateOfBirth'].invalid"
-        >Birth Date is required.</mat-error
-      >
-    </mat-form-field>
+  <mat-card class="client-card">
+    <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+      <mat-form-field>
+        <mat-label>Birth Date</mat-label>
+        <input matInput formControlName="DateOfBirth" required />
+        <mat-error *ngIf="formGroup.controls['DateOfBirth'].invalid"
+          >Birth Date is required.</mat-error
+        >
+      </mat-form-field>
 
-    <mat-form-field>
-      <mat-label>First Name</mat-label>
-      <input matInput formControlName="FirstName" required />
-      <mat-error *ngIf="formGroup.controls['FirstName'].invalid"
-        >First Name is required.</mat-error
-      >
-    </mat-form-field>
+      <mat-form-field>
+        <mat-label>First Name</mat-label>
+        <input matInput formControlName="FirstName" required />
+        <mat-error *ngIf="formGroup.controls['FirstName'].invalid"
+          >First Name is required.</mat-error
+        >
+      </mat-form-field>
 
-    <mat-form-field>
-      <mat-label>Last Name</mat-label>
-      <input matInput formControlName="LastName" required />
-      <mat-error *ngIf="formGroup.controls['LastName'].invalid"
-        >Last Name is required.</mat-error
-      >
-    </mat-form-field>
+      <mat-form-field>
+        <mat-label>Last Name</mat-label>
+        <input matInput formControlName="LastName" required />
+        <mat-error *ngIf="formGroup.controls['LastName'].invalid"
+          >Last Name is required.</mat-error
+        >
+      </mat-form-field>
 
-    <mat-form-field>
-      <mat-label>Sex</mat-label>
-      <input matInput formControlName="Sex" required />
-      <mat-error *ngIf="formGroup.controls['Sex'].invalid"
-        >Sex is required.</mat-error
-      >
-    </mat-form-field>
+      <mat-form-field>
+        <mat-label>Sex</mat-label>
+        <input matInput formControlName="Sex" required />
+        <mat-error *ngIf="formGroup.controls['Sex'].invalid"
+          >Sex is required.</mat-error
+        >
+      </mat-form-field>
 
-    <mat-form-field>
-      <mat-label>National ID Number</mat-label>
-      <input matInput formControlName="IdNumber" required />
-      <mat-error *ngIf="formGroup.controls['IdNumber'].invalid"
-        >National ID Number is required.</mat-error
-      >
-    </mat-form-field>
+      <mat-form-field>
+        <mat-label>National ID Number</mat-label>
+        <input matInput formControlName="IdNumber" required />
+        <mat-error *ngIf="formGroup.controls['IdNumber'].invalid"
+          >National ID Number is required.</mat-error
+        >
+      </mat-form-field>
 
-    <mat-form-field>
-      <mat-label>Email</mat-label>
-      <input matInput formControlName="Email" required />
-      <mat-error *ngIf="formGroup.controls['Email'].invalid"
-        >Invalid email format.</mat-error
-      >
-    </mat-form-field>
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="Email" required />
+        <mat-error *ngIf="formGroup.controls['Email'].invalid"
+          >Invalid email format.</mat-error
+        >
+      </mat-form-field>
 
-    <button mat-raised-button color="primary" [disabled]="formGroup.invalid">
-      Submit
-    </button>
-  </form>
+      <button mat-raised-button color="primary" [disabled]="formGroup.invalid" [routerLink]="['']">
+        Submit
+      </button>
+    </form>
+  </mat-card>
 </div>
